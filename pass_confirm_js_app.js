@@ -6,16 +6,16 @@ var $username = $("#username");
 // Hide Hints
 $("form span").hide();
 
+function isUsernamePresent() {
+    return $username.val().length > 0;
+}
+
 function isPasswordValid() {
     return $password.val().length > 8;
 }
 
 function arePasswordsMatching() {
     return $password.val() === $confirm_password.val();
-}
-
-function isUsernamePresent() {
-    return !($username.val() === "" || $username.val() === null);
 }
 
 function canSubmit() {
